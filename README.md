@@ -18,7 +18,9 @@ We will use the handly GraphQL [playground](https://github.com/prisma/graphql-pl
 
 Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in GraphQL playground.
 
-GetAll Resources:
+### Example queries
+
+`GetAll Resources:`
 
 ```
 {
@@ -28,6 +30,20 @@ GetAll Resources:
     description
     credit
     url
+  }
+}
+```
+
+`GetAResourceById:`
+
+```
+{
+  resource(id: 1) {
+    id
+    title
+    description
+    url
+    credit
   }
 }
 ```
