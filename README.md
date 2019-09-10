@@ -12,6 +12,26 @@ Serverless GraphQL API built with Netlify functions and Apollo. This is a POC us
 > ntl dev ## this will run your server locally
 ```
 
+## Running GraphQL queries
+
+We will use the handly GraphQL [playground](https://github.com/prisma/graphql-playground) app to test/run queries against our GraphQL API.
+
+Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in GraphQL playground.
+
+GetAll Resources:
+
+```
+{
+  resources {
+    id
+    title
+    description
+    credit
+    url
+  }
+}
+```
+
 ## Technologies used
 
 - Netlify

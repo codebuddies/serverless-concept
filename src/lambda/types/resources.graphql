@@ -1,5 +1,6 @@
 type Query {
   resources: [Resource]!
+  resource(id: ID!): Resource
 }
 
 type Resource {

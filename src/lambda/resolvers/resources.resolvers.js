@@ -1,6 +1,7 @@
+// will switch over to a real db for data sources once we vet the POC
 const resources = [
   {
-    id: 1,
+    id: '1',
     title: 'Learning React',
     description: 'Official react tutorial',
     url: 'https://reactjs.org/tutorial/tutorial.html',
@@ -22,7 +23,7 @@ const resources = [
     ]
   },
   {
-    id: 2,
+    id: '2',
     title: 'Learning Vue',
     description: 'Official Vuejs tutorial',
     url: 'https://vuejs.org/v2/guide/',
@@ -54,6 +55,11 @@ const resources = [
 
 module.exports = {
   Query: {
-    resources: () => resources
+    resources: () => resources,
+    resource: (parent, args, context, info) => {
+      return resources.find(resource => {
+        return resource.id === args.id;
+      });
+    }
   }
 };
