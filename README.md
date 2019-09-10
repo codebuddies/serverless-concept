@@ -1,15 +1,19 @@
 # Serverless proof-of-concept for CodeBuddies V3
 
-Background: https://github.com/codebuddies/codebuddies/issues/1136
+Serverless GraphQL API built with Netlify functions and Apollo. This is a POC using a serverless architecture for CB v3.
 
-Crowdsourced brainstorm of problems we want to solve: https://pad.riseup.net/p/BecKdThFsevRmmG_tqFa-keep
+## Local development
 
-# Proof-of-concept Goals
-- User profiles
-  - How easy is it to set up an editable user profile?
-- Calendar/hangouts
-  - How easy would it be to make a calendar widget that lets users block out times they're free for hangouts?
+```shell
+> npm i -g netlify-cli # install Netlify cli first!
+> git clone git@github.com:codebuddies/serverless-concept.git
+> cd serverless-concept
+> npm install
+> ntl dev ## this will run your server locally
+```
 
-# Findings
+## Technologies used
 
-# Technologies Used
+- Netlify
+- AWS Lambda functions with node (via Netlify functions)
+- GraphQL (Apollo)
