@@ -1,16 +1,22 @@
-const { ApolloServer, gql } = require('apollo-server-lambda');
+const { ApolloServer } = require('apollo-server-lambda');
+const path = require('path');
 const {
   fileLoader,
   mergeResolvers,
   mergeTypes
 } = require('merge-graphql-schemas');
 
-exports.initialize = (typesDirectory, resolversDirectory) => {
-  const typesArray = fileLoader(typesDirectory);
-  const resolversArray = fileLoader(resolversDirectory);
+exports.initialize = () => {
+  const typesDirectory = path.join(__dirname, '..', 'types');
+  const resolversDirectory = path.join(__dirname, '..', 'resolvers');
+  const typeDefs = mergeTypes(fileLoader(`${typesDirectory}/*.graphql`));
+  console.log(`typeDefs: ${JSON.stringify(typeDefs)}`);
+  const resolvers = mergeResolvers(
+    fileLoader(`${resolversDirectory}/*.resolvers.js`)
+  );
   const apolloServerConfig = {
-    typeDefs: mergeTypes(typesArray),
-    resolvers: mergeResolvers(resolversArray),
+    typeDefs,
+    resolvers,
     introspection: true
   };
 

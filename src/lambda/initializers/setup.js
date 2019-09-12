@@ -1,4 +1,4 @@
-const apollo = require('./apollo');
+const apollo = require('./apollo.initializer');
 
 exports.run = async () => {
   apollo();

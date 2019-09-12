@@ -4,9 +4,10 @@
   "private": true,
   "dependencies": {
     "apollo-server-lambda": "2.9.3",
+    "encoding": "0.1.12",
     "graphql": "14.5.4",
+    "graphql-tag-pluck": "0.8.4",
     "merge-graphql-schemas": "1.7.0",
-    "netlify-lambda": "1.6.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -15,8 +16,6 @@
     "start": "react-scripts start",
     "build": "run-p build:**",
     "build:app": "react-scripts build",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
