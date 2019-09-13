@@ -7,8 +7,9 @@ const {
 } = require('merge-graphql-schemas');
 
 exports.initialize = () => {
-  const typesDirectory = path.join(__dirname, '..', 'types');
-  const resolversDirectory = path.join(__dirname, '..', 'resolvers');
+  const typesDirectory = path.resolve(__dirname, '../types');
+  console.log(`types directory: ${typesDirectory}`);
+  const resolversDirectory = path.resolve(__dirname, '../resolvers');
   const typeDefs = mergeTypes(fileLoader(`${typesDirectory}/*.graphql`));
   console.log(`typeDefs: ${JSON.stringify(typeDefs)}`);
   const resolvers = mergeResolvers(
