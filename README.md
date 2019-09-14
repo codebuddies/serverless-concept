@@ -14,13 +14,13 @@ Serverless GraphQL API built with Netlify functions and Apollo. This is a POC us
 
 ## Running GraphQL queries
 
-We will use the handly GraphQL [playground](https://github.com/prisma/graphql-playground) app to test/run queries against our GraphQL API.
+We will use the handly GraphQL [playground](https://github.com/prisma/graphql-playground) app to test/run queries against our GraphQL API. Go ahead and download and install it on your local machine.
 
 Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in GraphQL playground.
 
 ### Example queries
 
-`GetAll Resources:`
+`GetAllResources:`
 
 ```
 {
@@ -34,7 +34,7 @@ Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in G
 }
 ```
 
-`GetAResourceById:`
+`GetResourceById:`
 
 ```
 {
@@ -48,8 +48,23 @@ Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in G
 }
 ```
 
+## Live site deployed on Netlify
+
+Front-end url: https://hardcore-haibt-da9a6b.netlify.com/
+
+Backend GraphQL url (lambda function): https://hardcore-haibt-da9a6b.netlify.com/graphl
+
+Please use GrapghQL [playground](https://github.com/prisma/graphql-playground) to run your queries against the live site hosted on Netlify.
+
+## TODO
+
+- Build out front-end UI to make the calls to the backend
+- Add a datastore to persist data on the backend lambda function
+- Add mutations (create new resource)
+
 ## Technologies used
 
 - Netlify
+- CRA (for front-end)
 - AWS Lambda functions with node (via Netlify functions)
 - GraphQL (Apollo)
