@@ -1,3 +1,4 @@
+const resourceType = `
 type Query {
   resources: [Resource]!
   resource(id: ID!): Resource
@@ -15,3 +16,5 @@ type Resource {
   modified: String
   type: String
 }
+`
+module.exports = resourceType

@@ -8,6 +8,7 @@
     "graphql": "14.5.4",
     "graphql-tag-pluck": "0.8.4",
     "merge-graphql-schemas": "1.7.0",
+    "netlify-lambda": "1.6.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -15,6 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "run-p build:**",
+    "build:lambda": "netlify-lambda build src/lambda",
     "build:app": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
