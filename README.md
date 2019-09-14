@@ -52,7 +52,7 @@ Enter the following url: `http://localhost:8888/.netlify/functions/graphql` in G
 
 Front-end url: https://hardcore-haibt-da9a6b.netlify.com/
 
-Backend GraphQL url (lambda function): https://hardcore-haibt-da9a6b.netlify.com/graphl
+Backend GraphQL url (lambda function): https://hardcore-haibt-da9a6b.netlify.com/.netlify/functions/graphql
 
 Please use GrapghQL [playground](https://github.com/prisma/graphql-playground) to run your queries against the live site hosted on Netlify.
 
