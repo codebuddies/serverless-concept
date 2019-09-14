@@ -16,7 +16,7 @@ exports.initialize = () => {
 exports.handleRequest = (request, context) => {
   const handlerPromise = new Promise((resolve, reject) => {
     const callback = (error, body) => (error ? reject(error) : resolve(body));
-    return this.handler(request, context, callback);
+    return exports.handler(request, context, callback);
   });
   return handlerPromise;
 };
