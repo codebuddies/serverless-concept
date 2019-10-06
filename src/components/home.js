@@ -15,9 +15,9 @@ function Home(props) {
         {loading ? <div>Loading Data from backend</div> : null}
         {error ? <div>Error loading data</div> : null}
 
-        {data && data.rates && data.rates.map((r, i) => (
+        {data && data.resources && data.resources.map((r, i) => (
           <div key={i}>
-            {r.currency} : {r.rate}USD$
+            {r.title} : {r.description}
           </div>
         ))}
       </header>

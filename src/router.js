@@ -6,7 +6,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 
 // TODO: Move uri value to config file
 const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io"
+  uri: "https://hardcore-haibt-da9a6b.netlify.com/.netlify/functions/graphql"
 });
 
 const Routes = () => {
