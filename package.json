@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "build": "run-p build:**",
     "build:lambda": "netlify-lambda build src/lambda",
     "build:app": "react-scripts build",
