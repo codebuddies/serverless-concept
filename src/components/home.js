@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from '../logo.svg';
-import './home.css';
+import React from "react";
+import "./home.css";
 
 function Home(props) {
-
-  const { loading, error, data} = props;
-  console.log(props)
+  const { loading, error, data } = props;
   return (
     <div className="home">
       <header className="home-header">
-        <img src={logo} className="home-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="home-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img
+          src="https://codebuddies.org/images/logo.svg"
+          className="home-logo"
+          alt="logo"
+        />
+
+        {loading ? <div>Loading Data from backend</div> : null}
+        {error ? <div>Error loading data</div> : null}
+
+        {data && data.rates && data.rates.map((r, i) => (
+          <div key={i}>
+            {r.currency} : {r.rate}USD$
+          </div>
+        ))}
       </header>
     </div>
   );
