@@ -1,6 +1,6 @@
 # Serverless proof-of-concept for CodeBuddies V3
 
-Serverless GraphQL API built with Netlify functions and Apollo. This is a POC using a serverless architecture for CB v3.
+Serverless GraphQL API built with Netlify functions and Apollo. This is a POC using a serverless architecture for CB v3. The API reference all the proof of concepts will be following: https://app.swaggerhub.com/apis-docs/billglover/CodeBuddies/0.0.1
 
 ## Local development
 
