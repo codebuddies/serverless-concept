@@ -1,7 +1,7 @@
 import { gql } from 'apollo-boost';
 
 
-export const EXCHANGE_RATES = gql`
+export const RESOURCES = gql`
   {
     resources {
       title
