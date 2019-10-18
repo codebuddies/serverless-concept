@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeContainer from "./containers/home";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
+import config from './config'
 
-// TODO: Move uri value to config file
 const client = new ApolloClient({
-  uri: "https://hardcore-haibt-da9a6b.netlify.com/.netlify/functions/graphql"
+  uri: config.graphUrl
 });
 
 const Routes = () => {
