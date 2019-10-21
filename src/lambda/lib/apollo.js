@@ -10,7 +10,12 @@ exports.initialize = () => {
   };
 
   const server = new ApolloServer(apolloServerConfig);
-  exports.handler = server.createHandler();
+  exports.handler = server.createHandler({
+    cors: {
+      origin: '*',
+      credentials: true
+    }
+  });
 };
 
 exports.handleRequest = (request, context) => {
